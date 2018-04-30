@@ -1,0 +1,23 @@
+#! /usr/bin/python3
+
+import time
+import getpass
+import random
+
+class colors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    ENDC = '\033[0m'
+
+def main():
+    username = getpass.getuser()
+    print("Welcome to The Matrix",colors.BLUE,username,colors.ENDC)
+    while True:
+        number = random.randint(0,10)
+        numbertwo = random.randint(0,10)
+        time.sleep(.2)
+        number = str(number) + '\t' + str(numbertwo) +'\t' + str(number) + '\t'
+        number = number * 8    
+        print(colors.GREEN,number,colors.ENDC)
+
+main()
